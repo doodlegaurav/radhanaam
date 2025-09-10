@@ -19,14 +19,14 @@
     }
 
     #counter {
-      font-size: 8vw; /* adjusts automatically for mobile */
+      font-size: clamp(2rem, 8vw, 4rem); /* responsive but safe */
       margin-bottom: 15px;
       color: #c2185b;
       font-weight: bold;
     }
 
     #chant {
-      font-size: 6vw;
+      font-size: clamp(1.5rem, 6vw, 3rem);
       margin-bottom: 25px;
       color: #6a1b9a;
       font-weight: bold;
@@ -35,10 +35,10 @@
     }
 
     button {
-      width: 80%;         /* big button for mobile thumb */
-      max-width: 300px;
-      padding: 15px;
-      font-size: 6vw;
+      width: 80%;
+      max-width: 280px;
+      padding: 16px;
+      font-size: clamp(1.5rem, 5vw, 2.2rem); /* safe scaling */
       cursor: pointer;
       border: none;
       border-radius: 16px;
@@ -47,10 +47,11 @@
       font-weight: bold;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       transition: transform 0.15s;
+      white-space: nowrap; /* prevents breaking */
     }
 
     button:active {
-      transform: scale(0.95); /* press feedback */
+      transform: scale(0.95);
     }
   </style>
 </head>
